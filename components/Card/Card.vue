@@ -118,7 +118,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  width: 280px;
+  flex: 1 1 auto;
+  max-width: 327px;
   cursor: pointer;
   border-radius: $default-radius;
   background-color: #fff;
@@ -127,7 +128,7 @@ export default {
   transition: border 0.1s ease-in, background 0.25s ease-in;
 
   @media screen and (min-width: 500px) {
-    width: 327px;
+    max-width: 544px;
   }
 
   &:hover {
