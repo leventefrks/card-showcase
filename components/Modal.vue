@@ -37,8 +37,8 @@
 import {
   MODAL_TITLE,
   MODAL_BODY_DESCRIPTION,
-  MODAL_BUTTON
-} from '@/assets/constants/index.js';
+  MODAL_BUTTON,
+} from '~/assets/constants/index.js';
 
 export default {
   name: 'Modal',
@@ -47,15 +47,15 @@ export default {
     return {
       title: MODAL_TITLE,
       description: MODAL_BODY_DESCRIPTION,
-      button: MODAL_BUTTON
+      button: MODAL_BUTTON,
     };
   },
 
   methods: {
     close() {
       this.$emit('close');
-    }
-  }
+    },
+  },
 };
 </script>
 

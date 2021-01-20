@@ -14,8 +14,8 @@
 import {
   BOOKING_TITLE,
   BOOKING_DESCRIPTION,
-  BOOKING_LINK
-} from '@/assets/constants/index.js';
+  BOOKING_LINK,
+} from '~/assets/constants/index.js';
 
 export default {
   name: 'Booking',
@@ -24,9 +24,9 @@ export default {
     return {
       title: BOOKING_TITLE,
       description: BOOKING_DESCRIPTION,
-      link: BOOKING_LINK
+      link: BOOKING_LINK,
     };
-  }
+  },
 };
 </script>
 

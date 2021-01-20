@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Loader from '@/components/Loader.vue';
+import Loader from '~/components/Loader.vue';
 
 export default {
   name: 'CardBody',
@@ -16,13 +16,13 @@ export default {
   props: {
     isLoading: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 
   components: {
-    Loader
-  }
+    Loader,
+  },
 };
 </script>
 

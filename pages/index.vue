@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main">
     <main-title />
     <card-container>
       <card
@@ -69,19 +69,19 @@ import {
   CARD_BODY_DESCRIPTION,
   CARD_FOOTER,
   LOADING_DURATION,
-  CARD_SETTINGS
-} from '@/assets/constants/index.js';
-import Card from '@/components/Card/Card.vue';
-import CardContainer from '@/components/Card/CardContainer.vue';
-import CardCover from '@/components/Card/CardCover.vue';
-import CardHeader from '@/components/Card/CardHeader.vue';
-import CardTitle from '@/components/Card/CardTitle.vue';
-import SubTitle from '@/components/Card/SubTitle.vue';
-import CardBody from '@/components/Card/CardBody.vue';
-import CardFooter from '@/components/Card/CardFooter.vue';
-import Thumbnail from '@/components/Card/Thumbnail.vue';
-import MainTitle from '@/components/MainTitle.vue';
-import Modal from '@/components/Modal.vue';
+  CARD_SETTINGS,
+} from '~/assets/constants/index.js';
+import Card from '~/components/Card/Card.vue';
+import CardContainer from '~/components/Card/CardContainer.vue';
+import CardCover from '~/components/Card/CardCover.vue';
+import CardHeader from '~/components/Card/CardHeader.vue';
+import CardTitle from '~/components/Card/CardTitle.vue';
+import SubTitle from '~/components/Card/SubTitle.vue';
+import CardBody from '~/components/Card/CardBody.vue';
+import CardFooter from '~/components/Card/CardFooter.vue';
+import Thumbnail from '~/components/Card/Thumbnail.vue';
+import MainTitle from '~/components/MainTitle.vue';
+import Modal from '~/components/Modal.vue';
 
 export default {
   components: {
@@ -94,14 +94,14 @@ export default {
     SubTitle,
     CardBody,
     Modal,
-    Card
+    Card,
   },
 
   data() {
     return {
       cards: CARD_SETTINGS,
       isLoading: true,
-      isModalVisible: false
+      isModalVisible: false,
     };
   },
 
@@ -111,20 +111,22 @@ export default {
 
   methods: {
     onLoading() {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          this.isLoading = !this.isLoading;
-        }, LOADING_DURATION);
-      });
+      return setTimeout(() => {
+        this.isLoading = !this.isLoading;
+      }, LOADING_DURATION);
     },
 
     onToggleModalVisibility() {
       this.isModalVisible = !this.isModalVisible;
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
+.main {
+  min-height: 100vh;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.5s;

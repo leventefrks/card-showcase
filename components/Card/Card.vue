@@ -5,15 +5,15 @@
       {
         'card--focused': isFocused,
         'card--medium': isMedium,
-        'card--large': isLarge
-      }
+        'card--large': isLarge,
+      },
     ]"
     @click="onToggle"
   >
     <div
       :class="[
         'card__header-wrapper',
-        { 'card__header-wrapper--reverse': isCoverPlacementTop }
+        { 'card__header-wrapper--reverse': isCoverPlacementTop },
       ]"
     >
       <slot name="card-cover" />
@@ -30,8 +30,8 @@ import {
   COVER_PLACEMENT_BOTTOM,
   MODAL_SIZE_SMALL,
   MODAL_SIZE_MEDIUM,
-  MODAL_SIZE_LARGE
-} from '@/assets/constants/index.js';
+  MODAL_SIZE_LARGE,
+} from '~/assets/constants/index.js';
 
 export default {
   name: 'Card',
@@ -39,43 +39,43 @@ export default {
   props: {
     isLoading: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     coverPlacement: {
       type: String,
-      default: COVER_PLACEMENT_BOTTOM
+      default: COVER_PLACEMENT_BOTTOM,
     },
 
     index: {
       type: Number,
-      default: 0
+      default: 0,
     },
 
     isNavigation: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     isAlert: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     isLoading: {
       type: Boolean,
-      default: false
+      default: false,
     },
 
     size: {
       type: String,
-      default: MODAL_SIZE_SMALL
-    }
+      default: MODAL_SIZE_SMALL,
+    },
   },
 
   data() {
     return {
-      isFocused: false
+      isFocused: false,
     };
   },
 
@@ -90,7 +90,7 @@ export default {
 
     isLarge() {
       return this.size === MODAL_SIZE_LARGE;
-    }
+    },
   },
 
   methods: {
@@ -103,13 +103,13 @@ export default {
         this.$emit('show-modal');
       } else if (this.isNavigation) {
         this.$router.push({
-          path: '/booking'
+          path: '/booking',
         });
       } else {
         return;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
