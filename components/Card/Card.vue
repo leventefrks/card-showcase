@@ -6,6 +6,7 @@
         'card--focused': isFocused,
         'card--medium': isMedium,
         'card--large': isLarge,
+        'card--not-allowed': !isAlert && !isNavigation,
       },
     ]"
     @click="onToggle"
@@ -95,7 +96,7 @@ export default {
 
   methods: {
     onToggle() {
-      if (this.isLoading) return;
+      if (this.isLoading || (!this.isAlert && !this.isNavigation)) return;
 
       this.isFocused = !this.isFocused;
 
@@ -138,6 +139,10 @@ export default {
   &--focused {
     border: 1px solid $color-blue;
     box-shadow: 0px 0px 0px 4px rgba(47, 42, 141, 0.2);
+  }
+
+  &--not-allowed {
+    cursor: not-allowed;
   }
 
   &--medium {
