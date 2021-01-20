@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxt/image": "0.0.4",
+    "@nuxtjs/global-components": "^0.6.1",
     "@nuxtjs/google-fonts": "^1.2.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"

@@ -2,7 +2,7 @@
   <div
     :class="[
       'card-header',
-      { 'card-header--extra-gutter': isCoverPlacementTop }
+      { 'card-header--extra-gutter': isCoverPlacementTop },
     ]"
   >
     <slot name="card-header">
@@ -25,26 +25,20 @@
 </template>
 
 <script>
-import Loader from '@/components/Loader.vue';
-
 export default {
   name: 'CardHeader',
 
   props: {
     isCoverPlacementTop: {
       type: Boolean,
-      default: 'bottom'
+      default: 'bottom',
     },
 
     isLoading: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
-
-  components: {
-    Loader
-  }
 };
 </script>
 

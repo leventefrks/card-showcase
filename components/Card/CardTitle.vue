@@ -1,7 +1,7 @@
 <template lang="html" functional>
-  <h2 class="title">
+  <div class="title">
     <slot />
-  </h2>
+  </div>
 </template>
 
 <script>

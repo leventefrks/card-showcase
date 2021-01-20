@@ -1,10 +1,10 @@
 <template lang="html" functional>
-  <h3 class="sub-title"><slot /></h3>
+  <div class="sub-title"><slot /></div>
 </template>
 
 <script>
 export default {
-  name: 'SubTitle'
+  name: 'SubTitle',
 };
 </script>
 
