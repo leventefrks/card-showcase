@@ -1,4 +1,4 @@
-# kasa
+# card showcase
 
 ## Build Setup
 
