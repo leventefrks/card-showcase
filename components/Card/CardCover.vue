@@ -12,9 +12,9 @@ export default {
   props: {
     isLoading: {
       type: Boolean,
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
 };
 </script>
 
@@ -24,6 +24,7 @@ export default {
   height: 200px;
 
   &__image {
+    display: block;
     max-width: 100%;
     height: 100%;
     user-select: none;

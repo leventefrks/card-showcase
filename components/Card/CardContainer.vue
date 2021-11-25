@@ -12,17 +12,17 @@ export default {
 
 <style lang="scss" scoped>
 .card-container {
-  display: grid;
-  min-height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 24px;
+  display: flex;
   justify-items: center;
+  gap: 25px;
+  min-height: 100%;
   margin-top: 20px;
   padding: 10px;
 
-  @media screen and (min-width: 500px) {
-    grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+  @media (min-width: 500px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 20px;
   }
 }
 </style>
