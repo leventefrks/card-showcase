@@ -14,7 +14,7 @@
 import {
   BOOKING_TITLE,
   BOOKING_DESCRIPTION,
-  BOOKING_LINK,
+  BOOKING_LINK
 } from '~/assets/constants/index.js';
 
 export default {
@@ -24,9 +24,9 @@ export default {
     return {
       title: BOOKING_TITLE,
       description: BOOKING_DESCRIPTION,
-      link: BOOKING_LINK,
+      link: BOOKING_LINK
     };
-  },
+  }
 };
 </script>
 
@@ -36,7 +36,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
 
   .message {
     background-color: #f2f2f2;

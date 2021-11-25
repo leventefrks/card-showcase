@@ -21,7 +21,7 @@
             <button
               type="button"
               class="modal__button"
-              @click="close()"
+              @click="close"
               aria-label="Close modal"
             >
               {{ button }}
@@ -37,7 +37,7 @@
 import {
   MODAL_TITLE,
   MODAL_BODY_DESCRIPTION,
-  MODAL_BUTTON,
+  MODAL_BUTTON
 } from '~/assets/constants/index.js';
 
 export default {
@@ -47,15 +47,15 @@ export default {
     return {
       title: MODAL_TITLE,
       description: MODAL_BODY_DESCRIPTION,
-      button: MODAL_BUTTON,
+      button: MODAL_BUTTON
     };
   },
 
   methods: {
     close() {
       this.$emit('close');
-    },
-  },
+    }
+  }
 };
 </script>
 

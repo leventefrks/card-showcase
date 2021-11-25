@@ -1,8 +1,6 @@
 <template>
   <div class="not-found">
-    <h1 class="not-found__title">
-      404
-    </h1>
+    <h1 class="not-found__title">404</h1>
     <p class="not-found__description">
       Sorry We can't find the page! Don't worry though, everything is still
       AWESOME!
@@ -15,13 +13,7 @@
 export default {
   name: 'NotFound',
 
-  props: ['error']
-};
-</script>
-
-<script>
-export default {
-  layout: 'basic'
+  props: ['error'],
 };
 </script>
 
@@ -29,10 +21,8 @@ export default {
 .not-found {
   min-width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
   text-align: center;
 
   &__title {

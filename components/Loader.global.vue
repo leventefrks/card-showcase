@@ -46,6 +46,7 @@ export default {
       type: String
     }
   },
+
   computed: {
     computedWidth() {
       return (

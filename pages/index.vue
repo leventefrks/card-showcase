@@ -10,7 +10,7 @@
         :is-alert="card.isAlert"
         :is-navigation="card.isNavigation"
         :size="card.size"
-        @show-modal="onToggleModalVisibility()"
+        @show-modal="onToggleModalVisibility"
       >
         <template v-if="card.isCoverVisible" #card-cover>
           <card-cover :is-loading="isLoading">
@@ -58,7 +58,7 @@
         </template>
       </card>
     </card-container>
-    <modal v-show="isModalVisible" @close="onToggleModalVisibility()" />
+    <modal v-show="isModalVisible" @close="onToggleModalVisibility" />
   </main>
 </template>
 
@@ -69,7 +69,7 @@ import {
   CARD_BODY_DESCRIPTION,
   CARD_FOOTER,
   LOADING_DURATION,
-  CARD_SETTINGS,
+  CARD_SETTINGS
 } from '~/assets/constants/index.js';
 import Card from '~/components/Card/Card.vue';
 import CardContainer from '~/components/Card/CardContainer.vue';
@@ -94,14 +94,14 @@ export default {
     SubTitle,
     CardBody,
     Modal,
-    Card,
+    Card
   },
 
   data() {
     return {
       cards: CARD_SETTINGS,
       isLoading: true,
-      isModalVisible: false,
+      isModalVisible: false
     };
   },
 
@@ -118,13 +118,13 @@ export default {
 
     onToggleModalVisibility() {
       this.isModalVisible = !this.isModalVisible;
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>
 .main {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .page-enter-active,
