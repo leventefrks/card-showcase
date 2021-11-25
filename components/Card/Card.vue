@@ -133,7 +133,7 @@ export default {
   }
 
   &:hover {
-    background: rgba(45, 45, 45, 0.04);
+    background-color: rgba(45, 45, 45, 0.04);
   }
 
   &--focused {
@@ -143,6 +143,10 @@ export default {
 
   &--not-allowed {
     cursor: not-allowed;
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 
   &--medium {
